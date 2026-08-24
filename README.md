@@ -6,7 +6,7 @@ Humanizer rewrites AI-sounding text so it reads like a person wrote it, without 
 
 ## How it works
 
-Humanizer uses 35 patterns from Wikipedia's ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup. It makes a first pass without treating the original structure as fixed. Then it checks the draft against those patterns and the original claims before rewriting whatever still needs work.
+Humanizer uses 41 patterns. The first 35 come from Wikipedia's ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup. Six discourse patterns come from [StoryScope](https://arxiv.org/abs/2604.03136), a 2026 study of how the shape of AI stories differs from human ones. It makes a first pass without treating the original structure as fixed. Then it checks the draft against those patterns and the original claims before rewriting whatever still needs work.
 
 > "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."
 
@@ -52,7 +52,7 @@ Now humanize this text:
 
 Humanizer follows the sample's rhythm, word choice, punctuation, and deliberate quirks.
 
-## The 35 patterns
+## The 41 patterns
 
 ### Content patterns
 
@@ -114,6 +114,17 @@ Humanizer follows the sample's rhythm, word choice, punctuation, and deliberate 
 | 24 | **Too many qualifiers** | "could potentially possibly" | "may" |
 | 25 | **Generic positive endings** | "The future looks bright" | End with a fact or a sourced plan |
 
+### Discourse patterns
+
+| # | Pattern | Before | After |
+|---|---------|--------|-------|
+| 36 | **A moral spelled out at the end** | "she finally understood that grief was..." | End on the events or a concrete action |
+| 37 | **A portrait before the person acts** | "Marta was a tall woman in her fifties with..." | Let the character enter through action or speech |
+| 38 | **Feelings shown only through the body** | "Her chest tightened. Her breath caught." | Suggest naming a feeling plainly |
+| 39 | **Causality without seams** | "Because the letter arrived late, she missed..., which forced..." | Let one thing simply happen |
+| 40 | **Strictly linear chronology** | Earliest event first, step by step to the end | Consider opening mid-scene; keep procedures in order |
+| 41 | **Never turning to the reader** | "The meeting ran long, as meetings tend to do." | Suggest one direct aside where the format allows it |
+
 ## Full example
 
 *Details such as the month and neighborhood need to come from the writer. If they are missing, Humanizer should ask instead of making them up.*
@@ -148,12 +159,14 @@ Humanizer follows the sample's rhythm, word choice, punctuation, and deliberate 
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) is the source for the pattern list.
 - [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) maintains the page.
+- [StoryScope](https://arxiv.org/abs/2604.03136) (Russell et al., 2026) is the source for the discourse patterns.
 
 ## Version history
 
 <details>
 <summary>Show release notes</summary>
 
+- **2.12.0** - Added discourse patterns #36-41 for story shape: stated morals, portrait introductions, body-only emotion, causal chains without seams, strict chronology, and missing reader address. Based on the StoryScope study of AI fiction. 41 patterns total.
 - **2.11.2** - Removed the plugin symlink and separate Claude Desktop package. Current Claude Code loads the root `SKILL.md` directly, so GitHub's source ZIP now works in Claude Desktop. No change to the 35 patterns.
 - **2.11.1** - Added a Claude Desktop-ready release package with one regular `humanizer/SKILL.md` file. GitHub's source archive still keeps the plugin symlink (fixes #224). No change to the 35 patterns.
 - **2.11.0** - Rewrote all repo guidance, descriptions, checks, and skill instructions in Plain Language. Kept all 35 patterns and their behavior.

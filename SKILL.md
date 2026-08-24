@@ -7,14 +7,14 @@ description: |
   voice, filler, or chatbot artifacts. Based on Wikipedia's "Signs of AI writing."
 license: MIT
 metadata:
-  version: "2.11.2"
+  version: "2.12.0"
 ---
 
 # Humanizer: remove AI writing patterns
 
 Rewrite AI-sounding text so it reads like the writer, not a chatbot. Do not change what it says or make up details.
 
-The patterns below come from Wikipedia's ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup.
+Patterns 1-35 come from Wikipedia's ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup. Patterns 36-41 come from [StoryScope](https://arxiv.org/abs/2604.03136), a 2026 study of how AI stories differ from human ones in shape rather than style.
 
 ## What to do
 
@@ -390,6 +390,60 @@ Remove only the unsupported defense. If it contains a real claim, state that cla
 
 One rejected option may be valid. Several short, unrelated rejections are a stronger sign. Ask what new information each sentence adds. If it only records an earlier edit, rewrite the paragraph around its main point.
 
+## Discourse patterns
+
+The patterns above fix sentences. These six fix the shape of the whole piece, such as how a character enters or when the timeline breaks. They come from the [StoryScope](https://arxiv.org/abs/2604.03136) study of AI fiction, which found that style edits barely lower machine detection of AI text: after a full style rewrite of AI stories, detection fell by less than two points, because the shape still gave the text away. These checks target the shape choices with the largest human vs. AI gaps.
+
+Two limits apply. The study measured short fiction, so treating essays, posts, and documentation the same way is a reasoned extension, not a tested result. And six checks cover only part of the discourse layer, not all of it.
+
+Apply these checks to narrative and personal prose. Leave reference and technical text alone. §38 and §41 name something the text lacks, so offer them to the writer instead of editing them in.
+
+### 36. A moral spelled out at the end
+
+**Words to watch:** she finally understood that, the lesson was clear, in that moment he realized, it was never about the, what mattered all along
+**Problem:** AI narrators state the story's theme outright. Human writers usually let the events carry it. Cut the stated lesson, or end on a concrete action instead.
+**Before:**
+> She looked at the empty chair and finally understood that grief was not something to escape but something to carry.
+**After:**
+> She looked at the empty chair, then set out two cups anyway.
+
+### 37. A portrait before the person acts
+**Problem:** AI writing introduces a character with a block of appearance and background before the character does anything. Let the person enter through action or speech, and move any needed description into the scene.
+**Before:**
+> Marta was a tall woman in her fifties with silver-streaked hair and sharp green eyes. She had run the library for twenty years and was known for her dry wit.
+**After:**
+> Marta stamped the book without looking up. "Third time you've lost this one."
+
+### 38. Feelings shown only through the body
+
+**Words to watch:** chest tightened, stomach dropped, breath caught, heart hammered, hands trembled
+**Problem:** AI routes almost every emotion through a body signal and rarely names a feeling outright. Human writers name feelings far more often. When each emotion in a passage arrives as a body part, suggest naming one or two feelings plainly. This is a craft choice, so offer it instead of making the change yourself.
+**Before:**
+> Her chest tightened. Her breath caught as her stomach dropped.
+**After:**
+> She was afraid, and annoyed at herself for it. Her breath caught.
+
+### 39. Causality without seams
+**Problem:** In AI stories each event follows neatly from the one before. Human stories leave room for coincidence and digression. Do not bridge every step. Let one thing simply happen.
+**Before:**
+> Because the letter arrived late, she missed the train, which forced her onto the bus, where she met the man who would change her life.
+**After:**
+> The letter arrived late and she missed the train. On the bus, a stranger took the seat next to her.
+
+### 40. Strictly linear chronology
+**Problem:** AI tells long stories in strict time order. Human writers jump around more. In a longer narrative, consider opening mid-scene or letting a memory interrupt the timeline. Keep procedures, changelogs, minutes, and other sequential formats in order.
+**Before:**
+> Anna grew up in Ohio. She studied chemistry, moved to Boston, and took a lab job. Years later the lab closed.
+**After:**
+> The morning the lab closed, Anna thought about Ohio. She had come to Boston for this job straight out of school.
+
+### 41. Never turning to the reader
+**Problem:** Human writers address the reader directly far more often than AI does. Where the format allows an aside, one direct address can make the text sound like a person talking. Offer it to the writer instead of adding one yourself.
+**Before:**
+> The meeting ran long, as meetings tend to do.
+**After:**
+> The meeting ran long. You know how those go.
+
 ## Check for false positives
 
 ### What not to flag
@@ -449,8 +503,10 @@ These details often carry the writer's voice. Keep them unless they hurt the mea
 
 Return the result required by [How to return the result](#how-to-return-the-result).
 
-## Source
+## Sources
 
-This skill is based on [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup. Its patterns come from reviews of AI-generated text on Wikipedia.
+Patterns 1-35 are based on [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup. They come from reviews of AI-generated text on Wikipedia.
 
 Wikipedia's main point: "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."
+
+Patterns 36-41 are based on [StoryScope](https://arxiv.org/abs/2604.03136) (Russell et al., 2026), which measured 304 features across 61,608 human and LLM stories and found that story shape separates the two far better than style.
