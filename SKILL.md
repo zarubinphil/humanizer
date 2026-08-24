@@ -431,7 +431,7 @@ Apply these checks to narrative and personal prose. Leave reference and technica
 **After:**
 > The letter arrived late and she missed the train. On the bus, a stranger took the seat next to her.
 
-### 40. Strictly linear chronology
+### 40. Chronology without jumps
 **Problem:** AI jumps across time somewhat less than human writers (2.12 vs 2.40 on a 1-5 scale). In a longer narrative, consider opening mid-scene or letting a memory interrupt the timeline. Keep procedures, changelogs, minutes, and other sequential formats in order.
 **Before:**
 > Anna grew up in Ohio. She studied chemistry, moved to Boston, and took a lab job. Years later the lab closed.

@@ -124,7 +124,7 @@ Measured on short fiction. Applying these to posts, emails, and docs extends the
 | 37 | **A portrait before the person acts** | "Marta was a tall woman in her fifties with..." | Let the character enter through action or speech |
 | 38 | **Feelings shown only through the body** | "Her chest tightened. Her breath caught." | Suggest naming a feeling plainly |
 | 39 | **Causality without seams** | "Because the letter arrived late, she missed..., which forced..." | Let one thing simply happen |
-| 40 | **Strictly linear chronology** | Earliest event first, step by step to the end | Consider opening mid-scene; keep procedures in order |
+| 40 | **Chronology without jumps** | Earliest event first, step by step to the end | Consider opening mid-scene; keep procedures in order |
 | 41 | **Never turning to the reader** | "The meeting ran long. The agenda had nine items." | Suggest one direct aside where the format allows it |
 
 ## Full example
