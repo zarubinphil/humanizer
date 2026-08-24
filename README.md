@@ -116,6 +116,8 @@ Humanizer follows the sample's rhythm, word choice, punctuation, and deliberate 
 
 ### Discourse patterns
 
+Measured on short fiction. Applying these to posts, emails, and docs extends the mechanism to formats the study did not test.
+
 | # | Pattern | Before | After |
 |---|---------|--------|-------|
 | 36 | **A moral spelled out at the end** | "she finally understood that grief was..." | End on the events or a concrete action |
@@ -123,7 +125,7 @@ Humanizer follows the sample's rhythm, word choice, punctuation, and deliberate 
 | 38 | **Feelings shown only through the body** | "Her chest tightened. Her breath caught." | Suggest naming a feeling plainly |
 | 39 | **Causality without seams** | "Because the letter arrived late, she missed..., which forced..." | Let one thing simply happen |
 | 40 | **Strictly linear chronology** | Earliest event first, step by step to the end | Consider opening mid-scene; keep procedures in order |
-| 41 | **Never turning to the reader** | "The meeting ran long, as meetings tend to do." | Suggest one direct aside where the format allows it |
+| 41 | **Never turning to the reader** | "The meeting ran long. The agenda had nine items." | Suggest one direct aside where the format allows it |
 
 ## Full example
 
@@ -157,7 +159,7 @@ Humanizer follows the sample's rhythm, word choice, punctuation, and deliberate 
 
 ## Sources
 
-- [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) is the source for the pattern list.
+- [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) is the source for patterns 1-35.
 - [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) maintains the page.
 - [StoryScope](https://arxiv.org/abs/2604.03136) (Russell et al., 2026) is the source for the discourse patterns.
 
